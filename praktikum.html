@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cleaned Web Project</title>
+    <style>
+        body { font-family: sans-serif; background-color: white; color: black; padding: 20px; }
+        .sidebar { background: #f4f4f4; padding: 10px; border-left: 5px solid #ccc; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+        .red-text { color: red; }
+    </style>
+</head>
+<body>
+
+    <h1 class="red-text">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <img src="https://up.yimg.com/ib/th/id/OIP.Wg5PH0sArn9UuwQtyss6TgHaEe?pid=Api&rs=1&c=1&qlt=95&w=178&h=107" alt="Image" width="300">
+
+    <aside class="sidebar">
+        <p>Ini adalah konten sidebar untuk informasi tambahan</p>
+    </aside>
+
+    <p>Lorem ipsum</p>
+
+    <h2>Ini Artikel</h2>
+    <p>Ini adalah konten artikel dengan berbagai informasi menarik.</p>
+
+    <h3>Subjudul</h3>
+    <p>Ini adalah konten tambahan untuk informasi lebih dalam.</p>
+
+    <div id="mahasiswa"></div>
+
+    <form action="/submit" method="post">
+        <label>Nama:</label><br>
+        <input type="text" id="namaInput"><br><br>
+
+        <label>Nomor:</label><br>
+        <input type="number"><br><br>
+
+        <label>Tanggal:</label><br>
+        <input type="date"><br><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+
+    <hr>
+
+    <h3>Interaksi JavaScript</h3>
+    <button id="btnAlert">Klik Saya (Alert)</button>
+    <button id="btnUbah">Ubah Teks</button>
+    <h1 id="judul">Teks Awal</h1>
+
+    <br>
+    <input type="text" id="namaInput2" placeholder="Masukkan nama...">
+    <button id="btnTampilkan">Tampilkan</button>
+    <p id="hasil"></p>
+
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+        </tr>
+        <tr>
+            <td>Andi</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>&copy; By Muhammad Fiksar</p>
+    </footer>
+
+    <script>
+        const mhsDiv = document.getElementById('mahasiswa');
+        mhsDiv.innerHTML = "<strong>Nama:</strong> Muhammad Fiksar, <strong>Umur:</strong> 20";
+
+        document.getElementById("btnAlert").addEventListener("click", () => {
+            alert("Halo! Ini adalah JavaScript yang berfungsi!");
+        });
+
+        const judul = document.getElementById("judul");
+        document.getElementById("btnUbah").addEventListener("click", () => {
+            judul.textContent = "Teks sudah berubah!";
+            judul.style.color = "blue";
+        });
+
+        document.getElementById("btnTampilkan").addEventListener("click", function() {
+            const nama = document.getElementById("namaInput2").value;
+            if (nama === "") {
+                alert("Nama tidak boleh kosong!");
+            } else {    
+                document.getElementById("hasil").innerHTML = "Halo, " + nama;
+            }
+        });
+    </script>
+<body>
+    <
+</body>
+</body>
+</html>
